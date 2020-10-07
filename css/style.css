@@ -2,3 +2,51 @@
     box-sizing: border-box;
     margin: 0;
 }
+
+body {
+    font-family: 'Helvetica';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header, footer, input {
+    display: flex;
+    background-color: lightblue;
+    align-items: center;
+    flex-direction: row;
+    color: white;
+    height: 60px;
+    width: 100%;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px 0 20px 0;
+}
+
+#calculator {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+}
+
+.top { border-top: 3px solid rebeccapurple;}
+.bottom { border-bottom: 3px solid rebeccapurple;}
+.right { border-right: 3px solid rebeccapurple;}
+.left { border-left: 3px solid rebeccapurple;}
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    font-size: 65px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: grey;
+}
