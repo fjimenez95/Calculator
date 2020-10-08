@@ -28,9 +28,12 @@ function handleInput(event) {
 
 function handleResult() {
     let result = $($input).attr('value', eval(userInputString));
+    userInput=[];
+    userInput.push(eval(userInputString));
 }
 
 function render() {
     $($input).attr('value', '');
-    userInput = '';
+    userInput = [];
+    userInputString = '';
 }
