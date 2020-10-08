@@ -33,11 +33,7 @@ main {
     width: 600px;
 }
 
-.top { border-top: 3px solid rebeccapurple;}
-.bottom { border-bottom: 3px solid rebeccapurple;}
-.right { border-right: 3px solid rebeccapurple;}
-.left { border-left: 3px solid rebeccapurple;}
-.btn {
+.calcBtn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,6 +43,20 @@ main {
     font-weight: 600;
 }
 
-.btn:hover {
+.calcBtn:hover {
+    background-color: grey;
+}
+
+#result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    font-size: 65px;
+    font-weight: 600;
+}
+
+#result:hover {
     background-color: grey;
 }
