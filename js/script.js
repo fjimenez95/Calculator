@@ -16,8 +16,6 @@ $resultEl.on('click', handleResult);
 $clearEl.on('click', render);
 /*----- functions -----*/
 function handleInput(event) {
-    // Cache the inner text of the btn
-    // Push inner text into input
     userInput += event.target.dataset.index;
     $($input).attr('value', userInput);
 }
@@ -28,4 +26,5 @@ function handleResult() {
 
 function render() {
     $($input).attr('value', '');
+    userInput = '';
 }
