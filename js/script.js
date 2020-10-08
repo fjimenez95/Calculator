@@ -1,9 +1,10 @@
 /*----- constants -----*/
 // Model
-
+const OPERATORS = ['-', '/', '*', '+'];
 /*----- app's state (variables) -----*/
 let calculator;
-let userInput = '';
+let userInput = [];
+let userInputString = '';
 /*----- cached element references -----*/
 const $calculatorEl = $('#calculator');
 const $calcBtnEls = $('.calcBtn');
@@ -16,12 +17,17 @@ $resultEl.on('click', handleResult);
 $clearEl.on('click', render);
 /*----- functions -----*/
 function handleInput(event) {
-    userInput += event.target.dataset.index;
-    $($input).attr('value', userInput);
+    userInput.push(event.target.dataset.index);
+    if (OPERATORS.includes(userInput[userInput.length-1]) && (userInput[userInput.length-1] === userInput[userInput.length-2])) {
+        userInput.pop();
+        return;
+    } else console.log(false);
+    userInputString = userInput.join('');
+    $($input).attr('value', userInputString);
 }
 
 function handleResult() {
-    $($input).attr('value', eval(userInput));
+    $($input).attr('value', eval(userInputString));
 }
 
 function render() {
