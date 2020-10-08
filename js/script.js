@@ -18,7 +18,7 @@ $clearEl.on('click', render);
 /*----- functions -----*/
 function handleInput(event) {
     userInput.push(event.target.dataset.index);
-    if (OPERATORS.includes(userInput[userInput.length-1]) && (userInput[userInput.length-1] === userInput[userInput.length-2])) {
+    if (OPERATORS.includes(userInput[userInput.length-1]) && (OPERATORS.includes(userInput[userInput.length-2]))) {
         userInput.pop();
         return;
     } else console.log(false);
