@@ -31,12 +31,18 @@ main {
     margin: 100px;
     box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
     border-radius: 1px;
+    border-top-left-radius: 80%20px;
+    border-top-right-radius: 80%20px;
+    border-bottom-left-radius: 80%20px;
+    border-bottom-right-radius: 80%20px;
 }
 
 input {
+    display: flex;
     font-family: 'Press Start 2P', cursive;
     font-size: 20px;
     text-align: right;
+    height: 100px;
 }
 
 #calculator {
@@ -61,10 +67,10 @@ input {
     cursor: pointer;
     background-color: #ddd;
     transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
-    border-top-left-radius: 80%20px;
-    border-top-right-radius: 80%20px;
-    border-bottom-left-radius: 80%20px;
-    border-bottom-right-radius: 80%20px;
+    border-top-left-radius: 80%10px;
+    border-top-right-radius: 80%10px;
+    border-bottom-left-radius: 100%10px;
+    border-bottom-right-radius: 100%10px;
 }
 
 .calcBtn:active {
