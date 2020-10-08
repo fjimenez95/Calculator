@@ -21,7 +21,7 @@ function handleInput(event) {
 }
 
 function handleResult() {
-    $($input).attr('value', eval(userInput));
+    let result = $($input).attr('value', eval(userInput));
 }
 
 function render() {
